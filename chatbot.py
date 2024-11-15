@@ -7,9 +7,20 @@ import streamlit as st
 
 nltk.download('popular', quiet=True)
 
-# Load your CSV data
-data = pd.read_csv(r"C:\medchatbot\aimedchatbot.csv")
+import os
+import pandas as pd
+
+# Construct the path dynamically
+file_path = os.path.join(os.getcwd(), "aimedchatbot.csv")
+
+# Load the CSV file
+data = pd.read_csv(file_path)
+
+# Convert all data to strings and fill NaN values with empty strings
 data = data.astype(str).fillna('')
+
+# Continue with your processing...
+
 
 # Prepare the data
 sent_tokens = data['Question'].tolist()  # List of all questions in the dataset
