@@ -9,15 +9,15 @@ import random
 nltk.download('popular', quiet=True)
 
 # Load the CSV file
-file_path = os.path.join(os.getcwd(), "aimedchatbot.csv")
+file_path = os.path.join(os.getcwd(), "chatbot_data.csv")
 data = pd.read_csv(file_path)
 
 # Convert all data to strings and fill NaN values with empty strings
 data = data.astype(str).fillna('')
 
 # Prepare the data
-sent_tokens = data['Question'].tolist()  # List of all questions in the dataset
-answers = data['Answer'].tolist()  # List of all corresponding answers
+sent_tokens = data['question'].tolist()  # List of all questions in the dataset
+answers = data['answer'].tolist()  # List of all corresponding answers
 
 # Greeting inputs and responses
 GREETING_INPUTS = ("hello", "hi", "hey", "sup", "what's up")
