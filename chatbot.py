@@ -9,7 +9,7 @@ import random
 nltk.download('popular', quiet=True)
 
 # Load the CSV file
-file_path = os.path.join(os.getcwd(), "chatbot_data.csv")
+file_path = os.path.join(os.getcwd(), "chatbot_dataa.csv")
 data = pd.read_csv(file_path)
 
 # Convert all data to strings and fill NaN values with empty strings
